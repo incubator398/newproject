@@ -1,0 +1,20 @@
+add postgresql repo 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
+  sudo apt-key add -
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" >> /etc/apt/sources.list.d/postgresql.list'
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+download pgadmin4 
+https://www.ubuntuupdates.org/package/postgresql/bionic-pgdg/main/base/pgadmin4
+::::::::::::::::::::::::::::::::
+wget apt.postgresql.org/pub/repos/apt/pool/main/p/pgadmin4/pgadmin4_3.0-2.pgdg18.04+1_amd64.deb
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+apt-get update
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+dpkg -i pgadmin4_3.0-2.pgdg18.04+1_amd64.deb
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if any dependancy error 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+apt-get -f install
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
